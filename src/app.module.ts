@@ -13,10 +13,10 @@ import { ConfigModule } from '@nestjs/config';
   imports: [
     SequelizeModule.forRoot({
       dialect: 'mysql',
-      host: 'localhost',
+      host: 'movietestdb.cr2gkqqce18e.us-east-1.rds.amazonaws.com',
       port: 3306,
-      username: 'root',
-      password: 'F00tball',
+      username: 'admin',
+      password: 'F00tball2024',
       database: 'movie_db',
       synchronize: true,
       logging: true,
