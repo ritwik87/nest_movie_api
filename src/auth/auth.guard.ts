@@ -7,7 +7,6 @@ import {
 import { JwtService } from '@nestjs/jwt';
 import { jwtConstants } from './constants';
 import { Request } from 'express';
-import { ApiBearerAuth } from '@nestjs/swagger';
 
 @Injectable()
 export class AuthGuard implements CanActivate {

@@ -23,8 +23,9 @@ export class MoviesService {
     return await this.movieModel.findOne<Movie>({ where: { id } });
   }
 
-  update(id: number, updateMovieDto: UpdateMovieDto) {
-    return `This action updates a #${id} movie`;
+  async update(id: string, updateMovie: Partial<Movie>): Promise<Movie> {
+    const movie = await this.findOne(id);
+    return movie.update(updateMovie);
   }
 
   async remove(id: number) {
